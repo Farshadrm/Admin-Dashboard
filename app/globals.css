@@ -1,0 +1,94 @@
+@import "tailwindcss";
+:root {
+    --ink: #172033;
+    --muted: #8791a3;
+    --line: #e9edf4;
+    --blue: #356cf5;
+    --canvas: #f7f9fc;
+    --green: #15966a;
+    --red: #d94848;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--ink);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 13px;
+}
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+a {
+    /* color: inherit; */
+    text-decoration: none;
+}
+.surface {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+.field {
+    width: 100%;
+    border: 1px solid #e1e6ef;
+    border-radius: 7px;
+    padding: 10px 11px;
+    background: white;
+    outline: none;
+    color: #273248;
+}
+.field:focus {
+    border-color: #8ba9ff;
+    box-shadow: 0 0 0 3px #356cf51a;
+}
+.label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #4a5569;
+}
+.primary {
+    background: var(--blue);
+    color: white;
+    border-radius: 7px;
+    padding: 10px 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.secondary {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    padding: 9px 13px;
+    color: #4c5669;
+}
+.status {
+    border-radius: 20px;
+    padding: 4px 9px;
+    font-size: 10px;
+    font-weight: 700;
+    display: inline-block;
+}
+.status-active {
+    background: #e7f8ef;
+    color: #15966a;
+}
+.status-inactive {
+    background: #fff0f0;
+    color: #d94848;
+}
+.muted {
+    color: var(--muted);
+}

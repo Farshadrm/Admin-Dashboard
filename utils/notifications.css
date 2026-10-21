@@ -1,0 +1,90 @@
+
+.delete-alert-popup {
+    border-radius: 14px !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.16) !important;
+    font-family: inherit;
+}
+
+.delete-alert-icon {
+    width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    background: #fff0f0 !important;
+    color: #c62828 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.delete-alert-title {
+    margin-left: 3rem !important;
+    margin-top: -2rem !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #252b36 !important;
+}
+
+.delete-alert-content {
+    margin: 0 !important;
+    text-align: left !important;
+    display:flex !important;
+
+}
+
+.delete-alert-message {
+    margin-top: -1rem !important;
+    color: #7b8494;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.delete-alert-actions {
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 12px !important;
+    margin: 22px 0 0 !important;
+}
+
+.delete-alert-confirm,
+.delete-alert-cancel {
+    flex: 1;
+    min-height: 38px;
+    margin: 0 !important;
+    border-radius: 7px !important;
+    font-family: inherit;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.delete-alert-confirm {
+    
+    background: #c91f26 !important;
+    color: #ffffff !important;
+    border: 1px solid #c91f26 !important;
+    box-shadow: 0 3px 8px rgba(201, 31, 38, 0.18);
+}
+
+.delete-alert-confirm:hover {
+    background: #ae181f !important;
+}
+
+.delete-alert-cancel {
+    margin-left: 3rem !important;
+    background: #ffffff !important;
+    color: #4b5563 !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+.delete-alert-cancel:hover {
+    background: #f9fafb !important;
+}
