@@ -18,7 +18,6 @@ import Topbar from "@/components/Topbar";
 import { sampleProducts } from "@/lib/sample-products";
 import { confirmDelete } from "@/utils/notifications";
 
-
 function Meta({ icon, label, value }) {
     return (
         <div className="flex items-start gap-3 text-xs">
@@ -161,7 +160,6 @@ export default function ProductDetailPage() {
                                             {p.description ||
                                                 "No description has been added for this product yet."}
                                         </p>
-                                        
                                     </div>
                                 </div>
                                 <div className="my-7 grid gap-4 border-y border-slate-100 py-5 sm:grid-cols-2">
@@ -280,4 +278,3 @@ export default function ProductDetailPage() {
         </div>
     );
 }
-

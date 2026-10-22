@@ -123,7 +123,7 @@ export default function ProductsPage() {
     const categories = Array.from(new Set(products.map((p) => p.category)));
     async function remove(p) {
         setMenu("");
-        const result = await confirmDelete()
+        const result = await confirmDelete();
         if (!result.isConfirmed) return;
         try {
             if (!p._id.startsWith("p")) {
@@ -271,21 +271,19 @@ export default function ProductsPage() {
                             </div>
                         </div>
                         {loading ? (
-                            
                             <div className="flex min-h-64 flex-col items-center justify-center text-slate-400">
-                                <Loader
-                                    className="animate-spin"
-                                    size={24}
-                                />
+                                <Loader className="animate-spin" size={24} />
                                 <p className="mt-3 text-lg font-bold text-black">
                                     Loading products...
                                 </p>
-                                <p className="mt-3 text-xs">Please wait a few moments...</p>
+                                <p className="mt-3 text-xs">
+                                    Please wait a few moments...
+                                </p>
                             </div>
                         ) : filtered.length === 0 ? (
                             <div className="flex min-h-64 flex-col items-center justify-center p-6 text-center">
-                                <div className="mb-3 rounded-2xl bg-blue-50 p-4 text-blue-500">
-                                    <Package size={27} />
+                                <div className="mb-1 p-2 text-blue-500">
+                                    <Package size={37} />
                                 </div>
                                 <h3 className="font-semibold">
                                     No products found
@@ -361,13 +359,16 @@ export default function ProductsPage() {
                                                 <td className="px-3 py-3">
                                                     <span
                                                         className={`rounded-full ${
-                                                            p.category === "Electronics"
+                                                            p.category ===
+                                                            "Electronics"
                                                                 ? "bg-blue-100 text-blue-600"
-                                                            : p.category ==="Fashion"
-                                                                ? "bg-orange-100 text-orange-600"
-                                                            : p.category ==="Home & Kitchen"
-                                                                ? "bg-purple-100 text-purple-600"
-                                                            : "bg-gray-100 text-gray-600"
+                                                                : p.category ===
+                                                                    "Fashion"
+                                                                  ? "bg-orange-100 text-orange-600"
+                                                                  : p.category ===
+                                                                      "Home & Kitchen"
+                                                                    ? "bg-purple-100 text-purple-600"
+                                                                    : "bg-gray-100 text-gray-600"
                                                         } px-2 py-1 text-[10px] text-blue-600`}
                                                     >
                                                         {p.category}

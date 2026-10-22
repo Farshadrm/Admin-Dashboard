@@ -14,6 +14,37 @@ export async function GET() {
             },
             { status: 503 },
         );
+            //* Managing other errors //
+
+        //     console.error("GET /api/products error:", e);
+
+        // // MongoDB connection or network errors
+        // if (
+        //     [
+        //         "MongoServerSelectionError",
+        //         "MongooseServerSelectionError",
+        //         "MongoNetworkError",
+        //     ].includes(e?.name)
+        // ) {
+        //     return NextResponse.json(
+        //         { message: "Database unavailable. Please try again later." },
+        //         { status: 503 },
+        //     );
+        // }
+
+        // // Invalid MongoDB connection string or configuration
+        // if (e?.name === "MongoParseError") {
+        //     return NextResponse.json(
+        //         { message: "Database configuration error." },
+        //         { status: 500 },
+        //     );
+        // }
+
+        // // Any unexpected server error
+        // return NextResponse.json(
+        //     { message: "Internal server error." },
+        //     { status: 500 },
+        // );
     }
 }
 export async function POST(req) {
@@ -27,5 +58,33 @@ export async function POST(req) {
             { message: e?.message || "Could not create product" },
             { status: 400 },
         );
+
+        //* Managing other errors //
+    //     if (e.code === 11000) {
+    //         return NextResponse.json(
+    //             { message: "Product already exists" },
+    //             { status: 409 },
+    //         );
+    //     }
+    // }
+
+    // if (e.name === "ValidationError") {
+    //         return NextResponse.json(
+    //             { message: "Invalid product data" },
+    //             { status: 400 },
+    //         );
+    //     }
+
+    // if (e.name === "MongoServerSelectionError") {
+    //         return NextResponse.json(
+    //             { message: "Database unavailable" },
+    //             { status: 503 },
+    //         );
+    //     }  
+        
+    //     return NextResponse.json(
+    //         { message: "Internal server error" },
+    //         { status: 500 },
+    //     );
     }
 }

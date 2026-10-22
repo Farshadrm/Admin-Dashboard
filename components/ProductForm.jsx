@@ -22,11 +22,11 @@ export default function ProductForm({ initial, productId, demoMode = false }) {
     async function submit(e) {
         e.preventDefault();
         if (!data.name.trim()) {
-            await Swal.fire(
-                "Product name required",
-                "Enter a name before saving.",
-                "warning",
-            );
+            await Swal.fire({
+                icon: "warning",
+                title: "Product name required",
+                text: "Enter a name before saving",
+                });
             return;
         }
         setBusy(true);
@@ -60,10 +60,12 @@ export default function ProductForm({ initial, productId, demoMode = false }) {
             router.push("/products");
             router.refresh();
         } catch (err) {
-            await Swal.fire(
-                "Something went wrong",
-                err.message || "Please try again.",
-                "error",
+            await Swal.fire({
+                icon: "error",
+                title: "Something went wrong",
+                text: err.message || "Please try again.",
+                confirmButtonText: "Try again",
+            }
             );
         } finally {
             setBusy(false);
@@ -249,8 +251,8 @@ export default function ProductForm({ initial, productId, demoMode = false }) {
                     {busy
                         ? "Saving..."
                         : productId
-                          ? "Update Product"
-                          : "Save Product"}
+                            ? "Update Product"
+                            : "Save Product"}
                 </button>
             </div>
         </form>

@@ -23,6 +23,12 @@ export async function GET(_req, { params }) {
             { message: "Database unavailable" },
             { status: 503 },
         );
+
+        //* Managing other errors //
+        // .
+        // .
+        // .
+        // .
     }
 }
 export async function PUT(req, { params }) {
@@ -49,6 +55,12 @@ export async function PUT(req, { params }) {
             { message: e?.message || "Could not update product" },
             { status: 400 },
         );
+
+        //* Managing other errors //
+        // .
+        // .
+        // .
+        // .
     }
 }
 export async function DELETE(_req, { params }) {
@@ -72,5 +84,10 @@ export async function DELETE(_req, { params }) {
             { message: "Could not delete product" },
             { status: 503 },
         );
+        //* Managing other errors //
+        // .
+        // .
+        // .
+        // .
     }
 }
