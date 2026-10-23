@@ -5,6 +5,15 @@ import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
 import ProductForm from "@/components/ProductForm";
 import { sampleProducts } from "@/lib/sample-products";
+
+function State({ title, kind }) {
+    return (
+        <div className="surface flex min-h-64 flex-col items-center justify-center gap-3 text-slate-400">
+            {kind === "loading" ? "" : ""}
+            <p>{title}</p>
+        </div>
+    );
+}
 export default function EditProductPage() {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
@@ -50,11 +59,4 @@ export default function EditProductPage() {
         </div>
     );
 }
-function State({ title, kind }) {
-    return (
-        <div className="surface flex min-h-64 flex-col items-center justify-center gap-3 text-slate-400">
-            {kind === "loading" ? "◌" : "▱"}
-            <p>{title}</p>
-        </div>
-    );
-}
+

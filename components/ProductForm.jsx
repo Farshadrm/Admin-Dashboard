@@ -126,6 +126,7 @@ export default function ProductForm({ initial, productId, demoMode = false }) {
                                     reader.onload = () =>
                                         change("image", String(reader.result));
                                     reader.readAsDataURL(f);
+                                    // console.log("image added")
                                 }
                             }}
                         />
@@ -184,7 +185,7 @@ export default function ProductForm({ initial, productId, demoMode = false }) {
                                 className="field"
                                 type="number"
                                 min="0"
-                                step="0.01"
+                                step="0.1"
                                 required
                                 value={data.price}
                                 onChange={(e) =>

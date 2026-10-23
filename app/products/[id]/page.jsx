@@ -48,7 +48,7 @@ export default function ProductDetailPage() {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         const demo = sampleProducts.find((x) => x._id === id);
-        if (demo) {
+        if (demo) {d:\ISI\Samimi\4 - Grouting quality analysis using P-Q curves\Grouting quality analysis using P-Q curves\New folder (3) - Copy\Grouting quality analysis using P-Q curves eddited.pdf
             setP(demo);
             setLoading(false);
             return;
