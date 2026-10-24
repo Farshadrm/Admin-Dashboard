@@ -23,7 +23,7 @@ export default function Topbar() {
                     </div>
                     <div className="hidden sm:block">
                         <div className="text-[11px] font-semibold">
-                            ]Farshad Ramezani
+                            Farshad Ramezani
                         </div>
                         <div className="text-[10px] text-slate-400">Admin</div>
                     </div>
