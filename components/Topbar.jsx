@@ -19,11 +19,11 @@ export default function Topbar() {
 
                 <div className="flex items-center gap-2">
                     <div className="grid h-7 w-7 place-items-center rounded-full bg-amber-100 text-[10px] font-bold text-amber-800">
-                        HR
+                        FR
                     </div>
                     <div className="hidden sm:block">
                         <div className="text-[11px] font-semibold">
-                            Hadi Rahimi
+                            ]Farshad Ramezani
                         </div>
                         <div className="text-[10px] text-slate-400">Admin</div>
                     </div>
